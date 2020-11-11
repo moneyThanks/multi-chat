@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">  
+    console.log(returnCitySN["cip"]+','+returnCitySN["cname"])  
+</script>
+</head>
+<body>
+    <div class="mainbox">
+        <div class="panel bar">
+          <h2>柱形图</h2>
+          <div class="chart">
+              <!-- 业务图 -->
+              <input style="border:0px;border-bottom: 1px solid red;;" class="testInput"/>
+          </div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+</body>
+
+<style>
+    .testInput:focus{
+        outline: 0;
+    }
+    .colume{
+        width: 200px;
+        height: 200px;
+        border:1px solid red;
+    }
+.mainbox .panel {
+  position: relative;
+  height: 3.875rem;
+  padding: 0 0.1875rem 0.5rem;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  background: url(../images/line.png) rgba(225, 225, 225, 0.03);
+  margin-bottom: 0.1875rem;
+}
+.mainbox .panel::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel::after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-top: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-footer {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+}
+.mainbox .panel .panel-footer::before {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+.mainbox .panel .panel-footer::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+  content: "";
+}
+</style>
+</html>
