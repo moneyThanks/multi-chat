@@ -63,7 +63,7 @@ public class ServerStartListener implements CommandLineRunner {
 
                     }
                 });
-        bootstrap.bind(port).sync();
-        System.out.println("消息中心已经启动，端口为：" + port);
+        bootstrap.bind(30000).sync();
+        System.out.println("消息中心已经启动，端口为：" + 30000);
     }
 }
