@@ -1,7 +1,7 @@
 const app = new Vue({
     el:"#app",
     data: {
-        
+        value6:'test'
     },
     created:function() {
 
@@ -10,6 +10,8 @@ const app = new Vue({
 
     },
     methods:{
-
+        enterMsg(bs) {
+            alert(1)
+        }
     }
 })
