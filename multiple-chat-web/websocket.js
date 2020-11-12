@@ -59,6 +59,7 @@ function initWs(callBack) {
         ws.onmessage = function (msg) {  
             console.log("接收到服务器的消息："+ msg.data);
             var msgObj = JSON.parse(msg.data);
+            debugger
             if(msgObj.type == 2) {
                 //心跳回复消息
                 clearTimeout(closeTimeOut);
@@ -84,6 +85,7 @@ function initWs(callBack) {
 /** 心跳 */
 var heartTimeOut = null;
 function heart() {
+    debugger
     console.log("发送一次心跳");
     //构造心跳消息
     var heartMsg = {"type":2};
