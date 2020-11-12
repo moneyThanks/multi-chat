@@ -19,6 +19,7 @@ public class WebSocketOutMsgHandler extends ChannelOutboundHandlerAdapter {
     public void write(ChannelHandlerContext ctx, Object msg, ChannelPromise promise) throws Exception {
         if (msg instanceof WsMsgEntity) {
             String str = JSON.toJSONString(msg);
+            //System.out.println("出站消息：" + str);
             super.write(ctx, new TextWebSocketFrame(str), promise);
         } else {
             super.write(ctx, msg, promise);

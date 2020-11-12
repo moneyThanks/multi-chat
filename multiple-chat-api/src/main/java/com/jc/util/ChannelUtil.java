@@ -30,4 +30,8 @@ public class ChannelUtil {
         }
         return null;
     }
+
+    public static Map<UserIpInfo, Channel> map() {
+        return map;
+    }
 }

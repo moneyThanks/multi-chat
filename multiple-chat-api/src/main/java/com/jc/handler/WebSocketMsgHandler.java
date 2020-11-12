@@ -31,7 +31,7 @@ public class WebSocketMsgHandler extends SimpleChannelInboundHandler<TextWebSock
 
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, TextWebSocketFrame textWebSocketFrame) throws Exception {
-        System.out.println("接收到WebSocket的数据：" + textWebSocketFrame.text());
+        //System.out.println("接收到WebSocket的数据：" + textWebSocketFrame.text());
         String msg = textWebSocketFrame.text();
         //将消息字符串转换成实体类
         WsMsgEntity wsMsgEntity = JSON.parseObject(msg, WsMsgEntity.class);

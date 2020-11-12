@@ -24,6 +24,7 @@ public class WebSocketInitHandler extends SimpleChannelInboundHandler<WsMsgEntit
             //UserIpInfo user = (UserIpInfo) wsMsgEntity.getData();
             JSONObject jsonObject = (JSONObject) wsMsgEntity.getData();
             UserIpInfo user = jsonObject.toJavaObject(UserIpInfo.class);
+            System.out.println(user.getIp());
             //获得客户端对应的Channel
             Channel channel = ctx.channel();
             //管理当前用户id - channel的映射关系

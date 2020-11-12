@@ -23,10 +23,16 @@
                   
                 </i-Header>
                 <i-Content :style="{margin: '88px 20px 0', background: '#fff', minHeight: '500px'}">
-                    Content
+                    <ul>
+                        <li v-for="(item,index) in msgList">
+                            {{item}}
+                        </li>
+                    </ul>
                 </i-Content>
                 <i-Footer class="layout-footer-center">
+                    <i-button @click="enterMsg">发送</i-button>
                      <i-input v-model="userMsg" type="textarea" :rows="4" placeholder="Enter something..." @on-enter="enterMsg"/>
+                
                 </i-Footer>
             </Layout>
         </div>

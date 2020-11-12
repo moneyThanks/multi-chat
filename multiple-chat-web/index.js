@@ -1,7 +1,8 @@
 const app = new Vue({
     el:"#app",
     data: {
-        userMsg:'test'
+        userMsg:'',
+        msgList:[]
     },
     created:function() {
 
@@ -11,12 +12,14 @@ const app = new Vue({
     },
     methods:{
         init() {
+            var _this =  this
             initWs({
-                url:"ws://127.0.0.1:30000/msg",
+                url:"ws://192.168.0.104:30000/msg",
                 mymessage: function(msgObj) {
                     console.log("自定义的方法接收到消息：" + JSON.stringify(msgObj))
                     if (msgObj.type == 3) {
                         //todo将消息塞入聊天框
+                        _this.msgList.push(msgObj.data)
                     }
                 },
                 myopen:function() {
@@ -30,8 +33,8 @@ const app = new Vue({
                     var msg = {type: 1, data: msgData}
                     sendMsgObj(msg);
                 },
-                heartTime: 10000,
-                closeTime: 20000
+                heartTime: 1000,
+                closeTime: 2000
             })
         },
         enterMsg() {
