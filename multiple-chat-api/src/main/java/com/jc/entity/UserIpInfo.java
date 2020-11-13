@@ -10,4 +10,5 @@ import java.io.Serializable;
 public class UserIpInfo implements Serializable {
     private String ip;
     private String address;
+    private String data;
 }

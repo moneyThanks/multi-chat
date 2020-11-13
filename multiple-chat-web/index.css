@@ -30,4 +30,12 @@ body{
 }
 .layout-footer-center{
     text-align: center;
+    display: flex;
+}
+.ul-class{
+    padding: 10px 10px 0px 30px;
+}
+.layout-content{
+    overflow: auto;
+    max-height: 500px;
 }
